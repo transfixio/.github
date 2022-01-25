@@ -1,0 +1,4 @@
+{
+    "name": "Close Stale Pull Requests",
+    "description": "Scheduled workflow to comment on and then close stale pull requests."
+}
