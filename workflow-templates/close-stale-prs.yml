@@ -1,0 +1,9 @@
+name: Close Stale Pull Requests
+on:
+  workflow_dispatch: # Can be triggered manually
+  schedule:
+    - cron: "41 3 * * *" # 3:41 UTC / 10:41 EST (UTC-5) / 11:41PM EDT (UTC-4)
+
+jobs:
+  close-stale-prs:
+    uses: transfixio/.github/.github/workflows/close-stale-prs.yml@main
