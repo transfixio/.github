@@ -6,4 +6,4 @@ on:
 
 jobs:
   close-stale-prs:
-    uses: transfixio/.github/shared-workflows/close-stale-prs.yml@main
+    uses: transfixio/.github/.github/workflows/close-stale-prs.yml@main
