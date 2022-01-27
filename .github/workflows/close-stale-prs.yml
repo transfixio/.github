@@ -13,8 +13,8 @@ on:
         required: false
         type: number
   workflow_dispatch: # Can be triggered manually
-  schedule: # Runs every night
-    - cron: "41 3 * * *" # 3:41 UTC / 10:41 EST (UTC-5) / 11:41PM EDT (UTC-4)
+  schedule: # Runs once every day, in the late morning
+    - cron: "41 16 * * *" # 15:41 UTC / 10:41 AM EST (UTC-5) / 11:41 AM EDT (UTC-4)
 
 jobs:
   close-stale-prs:
@@ -32,6 +32,6 @@ jobs:
           days-before-pr-stale: ${{ inputs.days-before-pr-stale }}
           days-before-pr-close: ${{ inputs.days-before-pr-close }}
           exempt-draft-pr: true
-          operations-per-run: 200
+          operations-per-run: 5000
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
