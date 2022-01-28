@@ -27,7 +27,7 @@ jobs:
         with:
           days-before-issue-stale: -1
           days-before-issue-close: -1
-          stale-pr-message: "This pull request is stale because it has been open for ${{ inputs.days-before-pr-stale }} days with no activity. If you'd like to keep it, consider making it a draft."
+          stale-pr-message: "This pull request was marked stale because it has been open for ${{ inputs.days-before-pr-stale }} days with no activity. It will be closed automatically in ${{ inputs.days-before-pr-close }} days if it remains idle. Consider converting it to a draft if you aren't ready to merge it."
           close-pr-message: "This pull request was closed because it has been inactive for ${{ inputs.days-before-pr-close}} days since being marked as stale."
           days-before-pr-stale: ${{ inputs.days-before-pr-stale }}
           days-before-pr-close: ${{ inputs.days-before-pr-close }}
